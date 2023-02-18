@@ -27,7 +27,6 @@ import useTotalValueLocked from '../../hooks/useTotalValueLocked';
 import { roundAndFormatNumber } from '../../0x';
 import { useMemo } from 'react';
 
-// import { BombFinance } from '../../bomb-finance/BombFinance';
 import useBombStats from '../../hooks/useBombStats';
 
 import usebShareStats from '../../hooks/usebShareStats';
@@ -43,19 +42,6 @@ import Page from '../../components/Page';
 import { Helmet } from 'react-helmet';
 import { createGlobalStyle } from 'styled-components';
 import HomeImage from '../../assets/img/background.jpg';
-
-const UnstyledLink = ({ href, children }) => (
-  <a
-    href={href}
-    style={{
-      textDecoration: 'none',
-      color: 'inherit',
-      cursor: 'auto',
-    }}
-  >
-    {children}
-  </a>
-);
 
 const BackgroundImage = createGlobalStyle`
   body {
@@ -263,24 +249,18 @@ function Dashboard() {
               </div>
               <hr />
               <div className="secondLevel_FirstBox_Box_top_total_staked">
+                <TokenSymbol symbol="BSHARE" size={20} />
                 <p>Total Staked: {getDisplayBalance(totalStaked)}</p>
               </div>
               <DailyStake />
             </StyledBox>
           </div>
-          {/* <div>
-          <a
-            style={{ display: 'flex' }}
-            href="https://bombbshare.medium.com/the-bomb-cycle-how-to-print-forever-e89dc82c12e5"
-          >
-            Read Investment strategy
-          </a>
-        </div> */}
+
           <StyledBox className={'secondLevel_SecondBox'}>
             <p className="latest_news">Latest News</p>
           </StyledBox>
         </div>
-        {/* //bomb farm */}
+
         <StyledBox className="topLevelBox ThirdBox">
           <div className="ThirdBox_title">
             <p>Bomb Farms</p>
