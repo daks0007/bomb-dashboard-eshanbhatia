@@ -186,6 +186,7 @@ function Dashboard() {
               }}
               href="https://bombbshare.medium.com/the-bomb-cycle-how-to-print-forever-e89dc82c12e5"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <button className="invest_btn">Invest Now</button>
             </a>
@@ -199,6 +200,7 @@ function Dashboard() {
                 }}
                 href="https://discord.bomb.money"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <button className="secondary_btn">Chat On Discord</button>
               </a>
@@ -211,6 +213,7 @@ function Dashboard() {
                 }}
                 href="https://docs.bomb.money/welcome-start-here/readme"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <button className="secondary_btn">Read Docs</button>
               </a>
@@ -282,7 +285,7 @@ function Dashboard() {
             <div className="LastBox_SubBox_Box">
               <div className="LastBox_SubBox_Box_inline">
                 <p>Purchase BBond</p>
-                <button disabled="true" onClick={approve} className="circular_btn">
+                <button disabled="true" className="circular_btn">
                   Purchase <AiOutlineShoppingCart />
                 </button>
               </div>
