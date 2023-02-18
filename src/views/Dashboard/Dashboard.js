@@ -44,7 +44,7 @@ function Dashboard() {
   const bombFinance = useBombFinance();
   const bondStat = useBondStats();
 
-  const bondBalance = useTokenBalance(bombFinance ? bombFinance.BBOND : null);
+  // const bondBalance = useTokenBalance(bombFinance ? bombFinance.BBOND : null);
 
   const activeBanks = banks.filter((bank) => !bank.finished);
 
@@ -278,7 +278,7 @@ function Dashboard() {
               <p className="LastBox_SubBox_Box_largep">
                 {' '}
                 <h1 style={{ fontSize: '18px', color: 'white' }}>
-                  <TokenSymbol symbol="BBOND" size={30} /> {bondBalance.toNumber()}
+                  <TokenSymbol symbol="BBOND" size={30} /> {'0'}
                 </h1>
               </p>
             </div>
