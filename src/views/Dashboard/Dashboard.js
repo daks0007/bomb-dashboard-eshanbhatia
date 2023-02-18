@@ -2,41 +2,29 @@ import React from 'react';
 import './Dashboard.css';
 import { useWallet } from 'use-wallet';
 import UnlockWallet from '../../components/UnlockWallet';
-
 import useBanks from '../../hooks/useBanks';
-
 import MetamaskFox from '../../assets/img/metamask-fox.svg';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { BiDownArrowCircle } from 'react-icons/bi';
-
 import useBondStats from '../../hooks/useBondStats';
-import useApprove from '../../hooks/useApprove';
-
 import useTotalStakedOnBoardroom from '../../hooks/useTotalStakedOnBoardroom';
 import { getDisplayBalance } from '../../utils/formatBalance';
-
 import moment from 'moment';
 import useCashPriceInEstimatedTWAP from '../../hooks/useCashPriceInEstimatedTWAP';
-
 import useCurrentEpoch from '../../hooks/useCurrentEpoch';
 import ProgressCountdown from '../Boardroom/components/ProgressCountdown';
 import useTreasuryAllocationTimes from '../../hooks/useTreasuryAllocationTimes';
-
 import useBombFinance from '../../hooks/useBombFinance';
 import useTotalValueLocked from '../../hooks/useTotalValueLocked';
 import { roundAndFormatNumber } from '../../0x';
 import { useMemo } from 'react';
-
 import useBombStats from '../../hooks/useBombStats';
-
 import usebShareStats from '../../hooks/usebShareStats';
-
 import { Typography } from '@material-ui/core';
 import StyledBox from './utils/StyledBox';
 import useTokenBalance from '../../hooks/useTokenBalance';
 import DailyStake from './utils/DailyStake';
 import AdvancedStake from './utils/AdvancedStake';
-import useCatchError from '../../hooks/useCatchError';
 import TokenSymbol from '../../components/TokenSymbol';
 import Page from '../../components/Page';
 import { Helmet } from 'react-helmet';
@@ -56,15 +44,7 @@ function Dashboard() {
   const bombFinance = useBombFinance();
   const bondStat = useBondStats();
 
-  const fromToken = bombFinance ? bombFinance.BOMB : null;
   const bondBalance = useTokenBalance(bombFinance ? bombFinance.BBOND : null);
-
-  const catchError = useCatchError();
-
-  const {
-    contracts: { Treasury },
-  } = useBombFinance();
-  const [approve] = useApprove(fromToken, Treasury.address);
 
   const activeBanks = banks.filter((bank) => !bank.finished);
 
