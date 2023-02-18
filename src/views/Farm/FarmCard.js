@@ -48,11 +48,11 @@ const FarmCard = ({ bank }) => {
         </CardContent>
         <CardActions style={{ justifyContent: 'flex-end' }}>
           {!!account ? (
-              <Button className="shinyButtonSecondary" component={Link} to={`/farm/${bank.contract}`}>
-                  View
-              </Button>
+            <Button className="shinyButtonSecondary" component={Link} to={`/farm/${bank.contract}`}>
+              View
+            </Button>
           ) : (
-              <UnlockWallet />
+            <UnlockWallet />
           )}
         </CardActions>
       </Card>

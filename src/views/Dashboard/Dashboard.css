@@ -107,30 +107,177 @@ tr {
 
 .secondLevel {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   width: 80%;
+  margin: 0 10%;
 }
 
 .secondLevel_FirstBox {
-  width: 50%;
-  margin: 2rem 10%;
-  padding: 1rem 2rem;
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
+  width: 65%;
+  margin: 0;
 }
 
 .secondLevel_FirstBox_Box {
-  width: 100%;
-  margin: 1rem;
-  position: relative;
+  box-sizing: border-box;
+  margin-top: 1rem;
+  padding: 1rem;
+  /* position: absolute; */
   background: #0c1125;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.secondLevel_FirstBox_Box_top {
+  display: flex;
+  flex-direction: column;
+}
+
+.secondLevel_FirstBox_Box_top_title {
+  color: white;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.secondLevel_FirstBox_Box_top_subtitle {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.secondLevel_FirstBox_Box_top_subtitle_p {
+  margin: 0.4rem 0;
+}
+
+.secondLevel_FirstBox_Box_top_total_staked {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.secondLevel_FirstBox_Box_top_total_staked p {
+  margin-top: 0.1rem;
+  color: white;
+}
+
 .secondLevel_SecondBox {
-  position: relative;
+  /* position: absolute; */
+  flex-grow: 1;
+  margin-left: 1rem;
   box-sizing: border-box;
-  margin: 2rem 10%;
-  padding: 1rem 2rem;
   background: #0c1125;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 0.8rem;
+}
+
+.latest_news {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.invest_btn {
+  width: 100%;
+  box-sizing: border-box;
+  background: radial-gradient(
+      59345.13% 4094144349.28% at 39511.5% -2722397851.45%,
+      rgba(0, 245, 171, 0.5) 0%,
+      rgba(0, 173, 232, 0.5) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  border: 0.5px solid #e41a1a;
+  padding: 0.2rem;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 0.4rem;
+  /* identical to box height */
+}
+
+.secondLevel_FirstBox_btn2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.secondary_btn {
+  width: 47%;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #728cdf;
+  backdrop-filter: blur(12.5px);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+  font-feature-settings: 'liga' off;
+
+  color: #000000;
+}
+
+.ThirdBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.circular_btn {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  border-radius: 18px;
+  height: 36px;
+  font-size: 1rem;
+  margin: 0.2rem;
+}
+
+.ThirdBox_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ThirdBox p {
+  color: white;
+  margin: 0;
+}
+
+.ThirdBox_title p {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.LastBox_SubBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.LastBox_SubBox_Box {
+  display: flex;
+  flex-direction: column;
+}
+
+.LastBox_SubBox_Box p {
+  color: white;
+  margin: 0.2rem 0;
+}
+
+.LastBox_SubBox_Box_largep {
+  font-size: 1.3rem;
+}
+
+LastBox_SubBox_Box_inline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

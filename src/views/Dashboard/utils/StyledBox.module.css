@@ -1,0 +1,7 @@
+.box {
+  box-sizing: border-box;
+  background: rgba(35, 40, 75, 0.75);
+  border: 1px solid #728cdf;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+}

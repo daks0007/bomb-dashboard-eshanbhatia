@@ -1,0 +1,28 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title p {
+  color: white;
+}
+
+.name {
+  font-size: 1.5rem;
+}
+
+.hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 100%;
+  background-color: white;
+  height: 1px;
+}
